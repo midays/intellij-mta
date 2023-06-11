@@ -77,7 +77,7 @@ public class WindupCliParamBuilder {
         List<String> userIgnorePath = (List<String>)options.get("userIgnorePath");
         if (userIgnorePath != null && !userIgnorePath.isEmpty()) {
             params.add("--userIgnorePath");
-            params.add("\""+ userIgnorePath.get(0) +"\"");
+            params.add(String.join(" ", userIgnorePath));
         }
 
         // overwrite
